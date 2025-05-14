@@ -38,7 +38,7 @@ export default function GigiCornerPage() {
               <div className="aspect-square max-w-md mx-auto relative">
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <Image
-                    src="/beige-coffee-haven.png"
+                    src="/coffee.png"
                     alt="Gigi Corner Coffee"
                     width={600}
                     height={600}

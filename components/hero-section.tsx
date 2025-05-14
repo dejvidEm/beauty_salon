@@ -1,24 +1,37 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/contexts/language-context"
-import { memo } from "react"
-import { Blob, CircleBlob } from "@/components/ui/blob"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
+import { memo } from "react";
+import { Blob, CircleBlob } from "@/components/ui/blob";
 
 // Memoize the component to prevent unnecessary re-renders
 export default memo(function HeroSection() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-4 relative overflow-hidden">
       {/* Background Blobs and Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Main background elements */}
-        <CircleBlob top="10%" right="5%" size="80%" opacity={0.15} color="#e6d2b5" />
-        <Blob bottom="15%" left="10%" size="40%" opacity={0.1} color="#e6d2b5" rotate="-15deg" />
+        <CircleBlob
+          top="10%"
+          right="5%"
+          size="80%"
+          opacity={0.15}
+          color="#e6d2b5"
+        />
+        <Blob
+          bottom="15%"
+          left="10%"
+          size="40%"
+          opacity={0.1}
+          color="#e6d2b5"
+          rotate="-15deg"
+        />
 
         {/* Additional decorative elements */}
         {/* Small dots pattern top left */}
@@ -80,14 +93,16 @@ export default memo(function HeroSection() {
         <div
           className="absolute top-[60%] left-[5%] w-6 h-6 opacity-10"
           style={{
-            background: "radial-gradient(circle at center, #d2b48c 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle at center, #d2b48c 0%, transparent 70%)",
             borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%",
           }}
         ></div>
         <div
           className="absolute top-[20%] right-[20%] w-4 h-4 opacity-15"
           style={{
-            background: "radial-gradient(circle at center, #d2b48c 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle at center, #d2b48c 0%, transparent 70%)",
             borderRadius: "50%",
           }}
         ></div>
@@ -95,17 +110,35 @@ export default memo(function HeroSection() {
 
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 text-center md:text-left" data-aos="fade-right">
+          <div
+            className="space-y-6 text-center md:text-left"
+            data-aos="fade-right"
+          >
             <h1 className="font-serif text-5xl md:text-7xl tracking-tight leading-tight relative">
-              <span className="block ml-0 md:ml-0">{t.hero.title.line1}</span>
-              <span className="block ml-0 md:ml-12">{t.hero.title.line2}</span>
-              <span className="block ml-0 md:ml-6">{t.hero.title.line3}</span>
+              <img
+    src="/logo_gigi5.png"
+    alt="Logo"
+    className="absolute right-64 -top-10 h-20 w-auto md:h-48 -z-20 opacity-30"
+  />
+              <span className="block ml-10 md:ml-10">{t.hero.title.line1}</span>
+              <span className="block ml-10 md:ml-24">{t.hero.title.line2}</span>
+              <span className="block ml-10 md:ml-12">{t.hero.title.line3}</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-md mx-auto md:mx-0">{t.hero.subtitle}</p>
+            <p className="text-xl text-muted-foreground max-w-md mx-auto md:mx-0">
+              {t.hero.subtitle}
+            </p>
             <div className="flex justify-center md:justify-start">
-              <Button asChild className="rounded-full bg-[#d2b48c] hover:bg-[#c0a378] text-black px-8">
-                <Link href="https://bookio.com" target="_blank" rel="noopener noreferrer">
-                  {t.hero.bookButton} <ArrowRight className="ml-2 h-4 w-4" />
+              <Button
+                asChild
+                className="group rounded-full bg-[#d2b48c] hover:bg-[#c0a378] text-black px-8"
+              >
+                <Link
+                  href="https://bookio.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.hero.bookButton}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             </div>
@@ -132,8 +165,12 @@ export default memo(function HeroSection() {
               <div className="absolute -bottom-3 left-[20%] w-5 h-5 rounded-full bg-[#d2b48c]/25"></div>
 
               {/* Decorative cross marks */}
-              <div className="absolute top-[10%] -left-6 text-[#d2b48c]/40 text-xl">+</div>
-              <div className="absolute bottom-[15%] -right-6 text-[#d2b48c]/40 text-xl">+</div>
+              <div className="absolute top-[10%] -left-6 text-[#d2b48c]/40 text-xl">
+                +
+              </div>
+              <div className="absolute bottom-[15%] -right-6 text-[#d2b48c]/40 text-xl">
+                +
+              </div>
 
               {/* Main image */}
               <div className="absolute inset-0 rounded-full overflow-hidden">
@@ -156,7 +193,10 @@ export default memo(function HeroSection() {
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full">
                     <defs>
-                      <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                      <path
+                        id="circle"
+                        d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                      />
                     </defs>
                     <text fontSize="4.5">
                       <textPath xlinkHref="#circle" className="text-[#d2b48c]">
@@ -191,5 +231,5 @@ export default memo(function HeroSection() {
         </div>
       </div>
     </section>
-  )
-})
+  );
+});

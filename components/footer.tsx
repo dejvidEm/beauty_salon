@@ -13,10 +13,18 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-serif text-2xl mb-4">Gigi.</h3>
+            <div className="mb-4">
+    <img
+      src="/logo_gigi5.png" // ← uprav podľa skutočnej cesty k logu
+      alt="Gigi logo"
+      className="h-20 w-auto"
+    />
+  </div>
             <p className="text-muted-foreground">{t.footer.tagline}</p>
             {/* Add language switcher to footer */}
-            <LanguageSwitcher variant="footer" />
+            <div className="opacity-0">
+              <LanguageSwitcher variant="footer" /> 
+            </div>
           </div>
 
           <div>

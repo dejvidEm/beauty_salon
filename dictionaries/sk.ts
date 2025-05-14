@@ -6,7 +6,7 @@ export const sk = {
     aboutUs: "O nás",
     equipment: "Vybavenie",
     pricing: "Cenník",
-    gigiCorner: "Gigi Corner Káva",
+    gigiCorner: "Gigi Coffee",
   },
 
   // Hero Section
@@ -23,7 +23,7 @@ export const sk = {
 
   // Services Section
   services: {
-    title: 'SLUŽBY SALÓNU KRÁSY "BAGIRA"',
+    title: 'Sužby salónu GIGI Beauty Corner',
     items: [
       {
         title: "Odstránenie chĺpkov",
@@ -378,10 +378,10 @@ export const sk = {
   // Gigi Corner
   gigiCorner: {
     backLink: "Späť na Gigi Salón",
-    title: "Gigi Corner Káva",
+    title: "Gigi Coffee Corner",
     description:
-      "Útulný kútik, kde sa krása stretáva s relaxáciou. Vychutnajte si prémiovú kávu a pochúťky počas čakania na termín alebo si jednoducho oddýchnite.",
-    comingSoon: "Čoskoro v Salóne krásy Gigi!",
+      "Útulný kútik, kde sa krása stretáva s relaxáciou. Vychutnajte si prémiovú kávu, domáce limonády a pochúťky počas čakania na termín alebo si jednoducho oddýchnite.",
+    comingSoon: "Tvoja chvíľka pre seba.",
   },
 
   // Language Switcher
