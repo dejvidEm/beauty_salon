@@ -118,7 +118,7 @@ export default memo(function HeroSection() {
               <img
     src="/logo_gigi5.png"
     alt="Logo"
-    className="absolute right-64 -top-10 h-20 w-auto md:h-48 -z-20 opacity-30"
+    className="absolute sm:right-64 right-1/3 sm:-top-10 -top-16 h-20 w-auto md:h-48 -z-20 opacity-30"
   />
               <span className="block ml-10 md:ml-10">{t.hero.title.line1}</span>
               <span className="block ml-10 md:ml-24">{t.hero.title.line2}</span>
